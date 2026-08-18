@@ -6,3 +6,4 @@
 - [x] Change the Transit of States audience wording from entrepreneurs to people.
 - [x] Replace Vadim Nizhnik and Vladislav Khukharev founder photos with the supplied images.
 - [x] Restyle Alexey Levin’s supplied founder photo to match the visual treatment of the updated founder portraits.
+- [x] Add SKREPA as a reusable partner card with logo, short description, and external link; convert the partners section to a responsive multi-column grid for future projects.

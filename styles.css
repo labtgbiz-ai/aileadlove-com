@@ -402,3 +402,27 @@ iframe[data-src]{background:#111;border-radius:inherit}
 .partner-card-button span{font-size:1.15em;line-height:1}
 @media (max-width:768px){.partners-section{padding:4rem 0}.partners-subtitle{font-size:1rem;margin-top:-1.25rem;margin-bottom:2rem}.partner-card{grid-template-columns:1fr}.partner-card-visual{min-height:280px}.partner-card-image{object-position:center top}.partner-card-content{padding:2rem}.partner-card-content h3{font-size:2rem}.partner-card-lead{font-size:1rem}.partner-card-button{width:100%;justify-content:center;text-align:center}}
 @media (max-width:480px){.partner-card-visual{min-height:245px}.partner-card-content{padding:1.5rem}.partner-card-content h3{font-size:1.75rem}.partner-card-text{font-size:0.95rem}.partner-tags{margin-top:1.35rem}.partner-tags span{font-size:0.72rem;padding:0.5rem 0.7rem}}
+
+
+/* Reusable partner project grid */
+.partners-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+.partners-grid .partner-card{display:flex;flex-direction:column;min-width:0;height:100%;overflow:hidden;background:var(--white);border:1px solid rgba(30,155,240,0.1);border-radius:28px;box-shadow:var(--shadow);transition:transform 0.3s ease,box-shadow 0.3s ease}
+.partners-grid .partner-card:hover{transform:translateY(-6px);box-shadow:var(--luxury-shadow)}
+.partners-grid .partner-card-visual{position:relative;display:flex;align-items:center;justify-content:center;height:220px;min-height:220px;overflow:hidden;background:#121923;isolation:isolate}
+.partners-grid .partner-card-image{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform 0.5s ease}
+.partners-grid .partner-card:hover .partner-card-image{transform:scale(1.04)}
+.partners-grid .partner-card-image-overlay{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(14,27,57,0.02) 0%,rgba(14,27,57,0.04) 45%,rgba(30,155,240,0.3) 100%)}
+.partners-grid .partner-card-logo-visual{background:linear-gradient(145deg,#f7fbff 0%,#edf5ff 55%,#dceaff 100%)}
+.partner-card-logo-lockup{display:flex;align-items:center;gap:16px;padding:18px 24px;border:1px solid rgba(30,155,240,0.13);border-radius:22px;background:rgba(255,255,255,0.82);box-shadow:0 16px 30px rgba(38,104,173,0.12)}
+.partner-card-logo{width:56px;height:42px;object-fit:contain;display:block}
+.partner-card-logo-lockup span{font-size:1.65rem;letter-spacing:0.12em;font-weight:800;color:#242a35}
+.partners-grid .partner-card-content{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:2rem 2rem 2.1rem}
+.partners-grid .partner-card-content h3{margin:0 0 0.85rem;color:var(--text-dark);font-size:clamp(1.6rem,2.5vw,2.15rem);letter-spacing:-0.035em}
+.partners-grid .partner-card-lead{margin:0 0 0.9rem;color:var(--text-dark);font-size:1rem;line-height:1.6;font-weight:600}
+.partners-grid .partner-card-text{margin:0;color:var(--text-gray);font-size:0.94rem;line-height:1.65}
+.partners-grid .partner-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin:1.35rem 0 1.7rem}
+.partners-grid .partner-tags span{padding:0.52rem 0.72rem;border:1px solid rgba(30,155,240,0.14);border-radius:999px;background:#f6f9ff;color:#52708f;font-size:0.72rem;font-weight:600}
+.partners-grid .partner-card-button{display:inline-flex;align-items:center;gap:0.55rem;margin-top:auto;text-decoration:none}
+.partners-grid .partner-card-button span{font-size:1.15em;line-height:1}
+@media (max-width:768px){.partners-grid{grid-template-columns:1fr;gap:20px}.partners-grid .partner-card-visual{height:210px;min-height:210px}.partners-grid .partner-card-content{padding:1.75rem}.partners-grid .partner-card-content h3{font-size:1.9rem}.partners-grid .partner-card-button{width:100%;justify-content:center;text-align:center}}
+@media (max-width:480px){.partners-grid .partner-card-visual{height:190px;min-height:190px}.partners-grid .partner-card-content{padding:1.5rem}.partners-grid .partner-card-content h3{font-size:1.7rem}.partners-grid .partner-card-lead{font-size:0.96rem}.partners-grid .partner-tags span{font-size:0.69rem;padding:0.48rem 0.62rem}.partner-card-logo-lockup{gap:12px;padding:14px 18px}.partner-card-logo-lockup span{font-size:1.35rem}}
