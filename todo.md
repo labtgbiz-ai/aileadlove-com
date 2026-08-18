@@ -5,3 +5,4 @@
 - [x] Replace every outdated case link with https://teletype.in/@aileadlove/keysy.
 - [x] Change the Transit of States audience wording from entrepreneurs to people.
 - [x] Replace Vadim Nizhnik and Vladislav Khukharev founder photos with the supplied images.
+- [x] Restyle Alexey Levin’s supplied founder photo to match the visual treatment of the updated founder portraits.
