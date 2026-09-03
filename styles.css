@@ -433,3 +433,29 @@ iframe[data-src]{background:#111;border-radius:inherit}
 
 /* Link to the full case archive */
 .all-cases-wrap{display:flex;justify-content:center;margin-top:36px}.all-cases-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:14px 24px;border-radius:999px;text-decoration:none;font-weight:800;font-size:.98rem;color:#fff;background:linear-gradient(135deg,#1e9bf0,#6366f1);box-shadow:0 12px 25px rgba(30,155,240,.24);transition:transform .2s ease,box-shadow .2s ease}.all-cases-button:hover{transform:translateY(-2px);box-shadow:0 17px 30px rgba(30,155,240,.32)}.all-cases-button:focus-visible{outline:3px solid #1e9bf0;outline-offset:3px}@media(max-width:560px){.all-cases-wrap{margin-top:25px}.all-cases-button{width:100%;padding:14px 18px}}
+
+/* Ultra-narrow mobile safeguard for the homepage. */
+@media(max-width:280px){
+  .container{width:100%;max-width:none;padding-left:15px;padding-right:15px}
+  .navbar{padding:.7rem 0}
+  .navbar-content{min-width:0;gap:10px}
+  .logo{min-width:0;max-width:calc(100% - 42px)}
+  .logo a{display:flex;align-items:center;gap:7px;white-space:nowrap;min-width:0}
+  .logo img{margin-right:0!important;flex:0 0 auto;width:auto;max-width:34px;height:auto!important}
+  .logo-text{font-size:.92rem!important;letter-spacing:-.06em;white-space:nowrap}
+  .hero-content{min-width:0;gap:1.5rem;padding:2.6rem 0}
+  .hero-text{min-width:0}
+  .hero-title{font-size:1.55rem;line-height:1.14;letter-spacing:-.05em;overflow-wrap:anywhere;word-break:normal}
+  .hero-subtitle{font-size:.9rem;line-height:1.45;overflow-wrap:anywhere}
+  .brand-meaning{gap:.3rem;min-width:0}
+  .meaning-item{font-size:.84rem;line-height:1.35;overflow-wrap:anywhere}
+  .btn-lg{width:100%;max-width:100%;padding:.8rem 1rem;font-size:.92rem;line-height:1.22;white-space:normal;overflow-wrap:anywhere}
+  .hero-visual{min-width:0}
+  .section-title,.intro-content{min-width:0}
+  .section-title{overflow-wrap:anywhere}
+  .service-block,.service-header{min-width:0}
+  .service-block h3,.case-task,.case-content h4,.section-title{overflow-wrap:anywhere}
+  .case-card,.case-content,.partner-card,.partner-card-content,.advantage-card,.team-card{min-width:0}
+  .footer-content,.footer-section{min-width:0}
+  .footer-bottom{overflow-wrap:anywhere}
+}

@@ -10,3 +10,50 @@
 .video-showcase{display:grid;gap:42px}.showcase-heading{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:17px}.showcase-heading h3{font-size:1.35rem;letter-spacing:-.035em}.showcase-heading p{max-width:450px;color:var(--muted);font-size:.9rem;text-align:right}.vertical-reels{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(196px,19vw);gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;scrollbar-color:var(--blue) #dce9f6}.vertical-reels::-webkit-scrollbar{height:8px}.vertical-reels::-webkit-scrollbar-thumb{background:var(--blue);border-radius:99px}.vertical-reels::-webkit-scrollbar-track{background:#dce9f6;border-radius:99px}.portfolio-reel{aspect-ratio:9/16;scroll-snap-align:start;border-radius:18px;overflow:hidden;background:#eaf4ff;border:1px solid rgba(30,155,240,.17);box-shadow:0 9px 24px rgba(20,88,154,.09)}.portfolio-reel iframe,.wide-video iframe{display:block;width:100%;height:100%;border:0;background:#eaf4ff}.wide-videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.wide-video{aspect-ratio:16/9;overflow:hidden;border-radius:18px;background:#eaf4ff;border:1px solid rgba(30,155,240,.17);box-shadow:0 9px 24px rgba(20,88,154,.09)}.training-benefits{grid-template-columns:repeat(4,1fr)}
 @media(max-width:860px){.hero-video-wrap{max-width:330px}.showcase-heading{align-items:start;flex-direction:column}.showcase-heading p{text-align:left}.vertical-reels{grid-auto-columns:minmax(178px,55vw)}.wide-videos{grid-template-columns:repeat(2,1fr)}.training-benefits{grid-template-columns:1fr}}
 @media(max-width:560px){.hero-video-wrap{max-width:300px;border-radius:25px}.hero-video-sound{bottom:12px;padding:9px 13px}.video-showcase{gap:33px}.showcase-heading h3{font-size:1.2rem}.vertical-reels{grid-auto-columns:minmax(176px,66vw);gap:12px}.wide-videos{grid-template-columns:1fr;gap:13px}}
+
+/* Ultra-narrow mobile safeguard: keep every service-page block inside the viewport. */
+@media(max-width:280px){
+  .wrap{width:100%;padding-left:12px;padding-right:12px}
+  .navin{gap:10px}
+  .brand{font-size:1.16rem;letter-spacing:-.06em}
+  .menu{padding:6px}
+  .menu i{width:23px}
+  .hero{padding-top:42px}
+  .hero-grid{gap:27px;padding-bottom:25px;min-width:0}
+  .hero-grid>div{min-width:0}
+  .hero h1,.section-title h2,.split-copy h2,.closing h2{font-size:clamp(1.72rem,9.7vw,2.08rem);line-height:1.08;letter-spacing:-.05em;overflow-wrap:anywhere;word-break:normal}
+  .hero p,.section-title p,.split-copy p,.step p,.list-card p,.route-step p{font-size:.91rem;line-height:1.45;overflow-wrap:anywhere;word-break:normal}
+  .eyebrow{font-size:.62rem;letter-spacing:.08em;gap:7px;overflow-wrap:anywhere}
+  .button{width:100%;max-width:100%;white-space:normal;padding:12px 13px;font-size:.88rem;line-height:1.23;overflow-wrap:anywhere}
+  .hero-video-wrap{width:100%;max-width:100%;border-radius:20px}
+  .hero-video-sound{max-width:calc(100% - 14px);white-space:normal;line-height:1.2}
+  .visual{min-width:0}
+  .benefit-strip{min-width:0}
+  .benefit{padding:13px 12px}
+  .steps{padding-left:13px;padding-right:13px}
+  .cards,.list-grid,.route,.video-grid,.wide-videos{min-width:0}
+  .card,.list-card,.route-step{min-width:0;padding-left:13px;padding-right:13px}
+  .video-showcase,.showcase-heading{min-width:0}
+  .showcase-heading h3{overflow-wrap:anywhere}
+  .vertical-reels{grid-auto-columns:minmax(150px,78vw)}
+  .footer-top{min-width:0}
+}
+
+/* Phone-first video catalogue: use ordinary vertical scrolling instead of iframe-blocked horizontal swiping. */
+@media(max-width:560px){
+  .vertical-reels{
+    grid-auto-flow:row;
+    grid-template-columns:minmax(0,1fr);
+    grid-auto-columns:auto;
+    overflow:visible;
+    overscroll-behavior:initial;
+    scroll-snap-type:none;
+    padding:4px 0 18px;
+  }
+  .portfolio-reel{
+    width:100%;
+    max-width:100%;
+    scroll-snap-align:none;
+  }
+  .portfolio-reel iframe{pointer-events:auto}
+}
