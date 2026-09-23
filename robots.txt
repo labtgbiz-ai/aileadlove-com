@@ -2,13 +2,12 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-# Yandex
+# Search engines
 User-agent: Yandex
 Allow: /
 Crawl-delay: 1
 Disallow: /404.html
 
-# Google
 User-agent: Googlebot
 Allow: /
 Disallow: /404.html
